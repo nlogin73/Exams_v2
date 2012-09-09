@@ -10,3 +10,6 @@
 *.lai
 *.la
 *.a
+
+# Qt config user files
+*.pro.user 
