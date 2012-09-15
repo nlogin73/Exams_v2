@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="root" type="root" />
+		<xsd:complexType name="root">
+			<xsd:sequence>
+				<xsd:element name="Globals" type="Globals" maxOccurs="1" minOccurs="1"></xsd:element>
+				<xsd:element name="Unit" type="Unit" maxOccurs="1024" minOccurs="1"></xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:complexType name="Globals">
+		<xsd:sequence>
+			<xsd:element name="Title" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+			<xsd:element name="Version" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+			<xsd:element name="StartCode" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+			<xsd:element name="Author" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+    <xsd:complexType name="Unit">
+		<xsd:attribute name="Code" type="xsd:string" user="required"></xsd:attribute>
+
+		<xsd:sequence>
+			<xsd:element name="Title" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+			<xsd:element name="PracticeFile" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+			<xsd:element name="TestFile" type="xsd:string" maxOccurs="1" minOccurs="1"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

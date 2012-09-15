@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExtendedTheorySelectingDialog</class>
+ <widget class="QDialog" name="ExtendedTheorySelectingDialog">
+  <property name="geometry">
+   <rect>
+	<x>0</x>
+	<y>0</y>
+	<width>470</width>
+	<height>250</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+	<width>470</width>
+	<height>250</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+	<width>470</width>
+	<height>250</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+  background-color: #ffffff;
+  border: 5px solid #c9c9c9;
+  border-radius: 5px;
+}
+QDialog QLabel
+{
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #60616f;
+  text-align: center;
+}
+QDialog QLineEdit
+{
+  background-color: #f4f5f9;
+  border: 1px solid #cbcbcb;
+  border-radius: 3px;
+}
+
+QDialog &gt; QPushButton {
+
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #60616f;
+  text-align: center;
+
+  border: none;
+  border-radius: 10px;
+  
+  background-color:   qlineargradient(spread:reflect, x1:0.471, y1:0, x2:0.465, y2:1, stop:0.465909 rgba(247, 248, 250, 255), stop:1 rgba(227, 228, 232, 255))
+}
+QDialog &gt; QPushButton:hover {
+  background-color: #c6e4f0;
+}
+QDialog &gt; QPushButton:pressed {
+  padding-top: 1px;
+  background-color: qlineargradient(spread:reflect, x1:0.482, y1:1, x2:0.505, y2:0, stop:0.465909 rgba(247, 248, 250, 255), stop:1 rgba(227, 228, 232, 255))
+}
+
+
+QComboBox {
+  border: 2px solid #e6e6e9;
+  border-radius: 5px;
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  padding-left: 10px;
+
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #878787;
+
+}
+QComboBox::down-arrow {
+  border: none;
+  border-radius: 5px;
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  image: url(:/icons/icons/downArrow.png);
+}
+QComboBox::drop-down {
+  width: 25px;
+  border: none;
+  border-radius: 0px;
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  border-left: 2px solid #d6d7da;
+  margin: 4px 0px;
+  image: url(:/icons/icons/downArrow.png);
+
+}
+QComboBox:hover {
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  border-radius: 5px;
+}
+
+QComboBox QAbstractItemView, QComboBox QAbstractItemView::item  {
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  border: 1px solid #ecedef;
+  border-radius: 5px;
+  padding-left: 10px;
+  selection-background-color: #c6e4f0;
+
+ }
+
+QComboBox QAbstractItemView::item:hover  {
+  background-color: #c6e4f0;
+  selection-background-color: #c6e4f0;
+ }</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+	<number>15</number>
+   </property>
+   <property name="topMargin">
+	<number>20</number>
+   </property>
+   <property name="rightMargin">
+	<number>15</number>
+   </property>
+   <property name="bottomMargin">
+	<number>20</number>
+   </property>
+   <item row="0" column="0" colspan="2">
+	<widget class="QLabel" name="label">
+	 <property name="sizePolicy">
+	  <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+	   <horstretch>0</horstretch>
+	   <verstretch>0</verstretch>
+	  </sizepolicy>
+	 </property>
+	 <property name="text">
+	  <string>Выберите тему для изучения:</string>
+	 </property>
+	 <property name="alignment">
+	  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+	 </property>
+	</widget>
+   </item>
+   <item row="2" column="0">
+	<widget class="QPushButton" name="okPushButton">
+	 <property name="sizePolicy">
+	  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+	   <horstretch>0</horstretch>
+	   <verstretch>0</verstretch>
+	  </sizepolicy>
+	 </property>
+	 <property name="minimumSize">
+	  <size>
+	   <width>0</width>
+	   <height>35</height>
+	  </size>
+	 </property>
+	 <property name="maximumSize">
+	  <size>
+	   <width>16777215</width>
+	   <height>35</height>
+	  </size>
+	 </property>
+	 <property name="text">
+	  <string>ОК</string>
+	 </property>
+	</widget>
+   </item>
+   <item row="2" column="1">
+	<widget class="QPushButton" name="canselPushButton">
+	 <property name="sizePolicy">
+	  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+	   <horstretch>0</horstretch>
+	   <verstretch>0</verstretch>
+	  </sizepolicy>
+	 </property>
+	 <property name="minimumSize">
+	  <size>
+	   <width>0</width>
+	   <height>35</height>
+	  </size>
+	 </property>
+	 <property name="maximumSize">
+	  <size>
+	   <width>16777215</width>
+	   <height>35</height>
+	  </size>
+	 </property>
+	 <property name="text">
+	  <string>Отмена</string>
+	 </property>
+	</widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+	<widget class="QWidget" name="widget" native="true">
+	 <layout class="QVBoxLayout" name="verticalLayout">
+	  <property name="spacing">
+	   <number>0</number>
+	  </property>
+	  <property name="leftMargin">
+	   <number>20</number>
+	  </property>
+	  <property name="topMargin">
+	   <number>0</number>
+	  </property>
+	  <property name="rightMargin">
+	   <number>20</number>
+	  </property>
+	  <property name="bottomMargin">
+	   <number>0</number>
+	  </property>
+	  <item>
+	   <widget class="QTreeWidget" name="treeWidget">
+		<property name="styleSheet">
+		 <string notr="true">* {
+  background-color: #ffffff; 
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #909090;
+
+  border: 2px solid #e4e5e8;
+  border-radius: 5px;
+}
+QTreeWidget::branch:!open:has-children:adjoins-item {
+  image: url(:/icons/icons/closedTreeIcon.png);
+  border-image: none;
+}
+QTreeWidget::branch:open:has-children:adjoins-item {
+  image: url(:/icons/icons/openTreeIcon.png);
+  border-image: none;
+}
+QTreeWidget::branch:!has-children:adjoins-item {
+  image: url(:/icons/icons/endTreeIcon.png);
+  border-image: none;
+}/*
+QTreeWidget::branch:hover {
+  background-color: #c6e4f0;
+}
+QTreeWidget::item:hover {
+  background-color: #c6e4f0;
+}*/</string>
+		</property>
+		<property name="editTriggers">
+		 <set>QAbstractItemView::NoEditTriggers</set>
+		</property>
+		<property name="columnCount">
+		 <number>1</number>
+		</property>
+		<attribute name="headerVisible">
+		 <bool>false</bool>
+		</attribute>
+		<column>
+		 <property name="text">
+		  <string>root</string>
+		 </property>
+		</column>
+		<item>
+		 <property name="text">
+		  <string>1</string>
+		 </property>
+		 <item>
+		  <property name="text">
+		   <string>1.1</string>
+		  </property>
+		  <item>
+		   <property name="text">
+			<string>1.1.1</string>
+		   </property>
+		  </item>
+		 </item>
+		 <item>
+		  <property name="text">
+		   <string>1.2</string>
+		  </property>
+		 </item>
+		 <item>
+		  <property name="text">
+		   <string>1.3</string>
+		  </property>
+		 </item>
+		</item>
+		<item>
+		 <property name="text">
+		  <string>2</string>
+		 </property>
+		 <item>
+		  <property name="text">
+		   <string>2.1</string>
+		  </property>
+		  <item>
+		   <property name="text">
+			<string>2.1.1</string>
+		   </property>
+		  </item>
+		  <item>
+		   <property name="text">
+			<string>2.1.2</string>
+		   </property>
+		  </item>
+		 </item>
+		 <item>
+		  <property name="text">
+		   <string>2.2</string>
+		  </property>
+		 </item>
+		</item>
+		<item>
+		 <property name="text">
+		  <string>3</string>
+		 </property>
+		</item>
+	   </widget>
+	  </item>
+	 </layout>
+	</widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

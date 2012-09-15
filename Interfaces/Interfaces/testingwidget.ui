@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TestingWidget</class>
+ <widget class="QWidget" name="TestingWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1102</width>
+    <height>763</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="1">
+    <widget class="QWidget" name="contentWidget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">* {
+  background-color: #ffffff;
+}
+#contentWidgetSpacer
+{
+  background-color: #f4f5f9; 
+  border: 2px solid #e2e3e5;
+  border-radius: 5px;
+}
+#timeLabel
+{
+  text-align: right;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #60616f;
+}
+#tabWidget::pane
+{
+  border: none;
+}
+#theoryTab, #practiceTab
+{
+
+  margin: 0px;
+  padding: 0px;
+  background-color: #f6f7f9;
+}
+#tabWidget::tab-bar
+{
+  border: 2px solid #e2e3e5;
+  background-color: #e2e3e5;
+}
+#tabWidget &gt;  QTabBar::tab
+{
+  margin-left: -5px;
+  border: 2px solid #e2e3e5;
+  border-radius: 5px;
+  background-color: #e2e3e5;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #60616f;
+  width: 100px;
+  height: 20px;
+}
+#tabWidget &gt;  QTabBar::tab:first
+{
+  margin-left: 0px;
+}
+#tabWidget &gt;  QTabBar::tab:selected
+{
+  background-color: #f6f7f9;
+  border: 2px solid #f6f7f9;
+}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="leftMargin">
+       <number>15</number>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="timeLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>TimeLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="contentWidgetSpacer" native="true"/>
+      </item>
+      <item>
+       <widget class="QStackedWidget" name="answerWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>180</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>180</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#answerPage_A &gt; QGroupBox::title {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #909090;  
+}
+#answerPage_B QLabel {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #909090;  
+}
+</string>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="answerPage_A"/>
+        <widget class="QWidget" name="answerPage_B"/>
+        <widget class="QWidget" name="answerPage_C"/>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QWidget" name="menuWidget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>273</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#menuWidget {
+  background-color: #f4f5f9;
+  border-right: 2px solid #bbbbbb;
+  margin: 0px;
+  padding: 0px;
+}
+
+#menuWidget {
+  background-color: #f4f5f9;
+}
+#menuWidget &gt; QWidget
+{
+  margin-left: 9px;
+  margin-right: 9px;
+
+  border-right: 2px solid #bbbbbb;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #60616f;
+}
+#menuWidget &gt; QPushButton {
+  margin: 0px;
+  text-align: left;
+  border: none;
+  border-top: 1px solid #d0d1d4;
+  border-bottom: 1px solid #d0d1d4;
+  
+  margin-right: 2px;
+  padding-left: 5px;
+}
+#menuWidget &gt; QPushButton:hover {
+  background-color: #c6e4f0;
+  border-top: 1px solid #b2c6ce;
+  border-bottom: 1px solid #b2c6ce;
+}
+#menuWidget &gt; QPushButton:pressed {
+  padding-top: 1px;
+}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <item>
+       <spacer name="verticalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="startTestButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>  Начать тестирование</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/icons/icons/start.png</normaloff>:/icons/icons/start.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>36</width>
+          <height>36</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stopTestButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>  Закончить тестирование</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/icons/icons/stop.png</normaloff>:/icons/icons/stop.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>36</width>
+          <height>36</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>30</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QWidget" name="navigationWidget" native="true">
+        <property name="styleSheet">
+         <string notr="true">#navigationWidget
+{
+  background-color: #ffffff;
+  border: 2px solid #d0d1d4;
+  border-radius: 5px;
+
+}
+#navigationWidget QWidget
+{
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #60616f;
+}
+#navigationWidget &gt; #label
+{
+  background-color: #ffffff;
+  text-align: left;
+  border: none;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #60616f;
+}
+
+#navigationWidget &gt; QComboBox {
+  border: 2px solid #e6e6e9;
+  border-radius: 5px;
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  padding-left: 10px;
+}
+#navigationWidget &gt; QComboBox::down-arrow {
+  border: none;
+  border-radius: 5px;
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+}
+#navigationWidget &gt; QComboBox::drop-down {
+  width: 25px;
+  border: none;
+  border-radius: 0px;
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  border-left: 2px solid #d6d7da;
+  margin: 4px 0px;
+}
+#navigationWidget &gt; QComboBox:hover {
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  border-radius: 5px;
+}
+
+#navigationWidget &gt; QComboBox QAbstractItemView, QComboBox QAbstractItemView::item  {
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  border: 1px solid #ecedef;
+  border-radius: 5px;
+  padding-left: 10px;
+  selection-background-color: #c6e4f0;
+ }
+
+#navigationWidget &gt; QComboBox QAbstractItemView::item:hover  {
+  background-color: #c6e4f0;
+  selection-background-color: #c6e4f0;
+ }
+
+#navigationWidget QScrollArea {
+  border: 2px solid #ecedef;
+  border-radius: 5px;  
+}
+
+#navigationWidget QScrollBar {
+  background-color: #ffffff;
+  border: none;
+}
+#navigationWidget QScrollBar::handle {
+  border: 2px solid #ecedef;
+  border-radius: 5px;
+  background-color: #f4f5f9;
+}
+#navigationWidget QScrollBar::up-arrow{
+  border: none;
+  background-color: white;
+  width: 0px;
+  height: 0px;
+}
+#navigationWidget QScrollBar::down-arrow{
+  border: none;
+  background-color: white;
+  width: 0px;
+  height: 0px;
+}
+#scrollAreaWidgetContents &gt;  QWidget
+{
+  padding: 0px;
+  margin: 0px;
+ 
+  text-align: left;
+  border: none;
+  border-top: 1px solid #d0d1d4;
+  border-bottom: 1px solid #d0d1d4;
+  height: 45px;
+
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #60616f;
+
+  background-color: #f4f5f9;
+
+  padding-left: 5px;
+}
+#scrollAreaWidgetContents QPushButton
+{
+  border: none;
+  padding-left: 5px;
+  text-align: left;
+}
+
+#scrollAreaWidgetContents QToolButton {
+  margin: 0px;
+  padding: 0px;
+
+  border: none;
+  background-image: url(:/icons/icons/help.png);
+  background-repeat: none;
+  background-clip: border;
+}
+#scrollAreaWidgetContents QToolButton:hover {
+  margin: -4px;
+  padding: 0px;
+  border: 2px solid #d0d1d4;
+  border-radius: 2px;
+}
+
+#scrollAreaWidgetContents &gt; QWidget:hover {
+  background-color: #c6e4f0;
+  border-top: 1px solid #b2c6ce;
+  border-bottom: 1px solid #b2c6ce;
+}
+#scrollAreaWidgetContents &gt; QWidget:pressed {
+  padding-top: 1px;
+}</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <property name="leftMargin">
+          <number>16</number>
+         </property>
+         <property name="topMargin">
+          <number>16</number>
+         </property>
+         <property name="rightMargin">
+          <number>16</number>
+         </property>
+         <property name="bottomMargin">
+          <number>7</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Навигация</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <item>
+            <property name="text">
+             <string>Часть &quot;А&quot;</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Часть &quot;B&quot;</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Часть &quot;C&quot;</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QScrollArea" name="scrollArea">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>237</width>
+              <height>373</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+        <zorder>comboBox</zorder>
+        <zorder>scrollArea</zorder>
+        <zorder>label</zorder>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>70</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="exitPushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>  На главную</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/icons/icons/back.png</normaloff>:/icons/icons/back.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>36</width>
+          <height>36</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>50</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

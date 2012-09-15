@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/attention.png</file>
+        <file>icons/close.png</file>
+        <file>icons/library.png</file>
+        <file>icons/notepad.png</file>
+        <file>icons/settings.png</file>
+        <file>icons/back.png</file>
+        <file>icons/help.png</file>
+        <file>icons/notepad_1.png</file>
+        <file>icons/closedTreeIcon.png</file>
+        <file>icons/endTreeIcon.png</file>
+        <file>icons/openTreeIcon.png</file>
+        <file>icons/start.png</file>
+        <file>icons/stop.png</file>
+    </qresource>
+</RCC>

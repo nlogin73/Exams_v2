@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PersonalizationDialog</class>
+ <widget class="QDialog" name="PersonalizationDialog">
+  <property name="geometry">
+   <rect>
+	<x>0</x>
+	<y>0</y>
+	<width>470</width>
+	<height>370</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+	<horstretch>0</horstretch>
+	<verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+  background-color: #ffffff;
+  border: 5px solid #c9c9c9;
+  border-radius: 5px;
+}
+QDialog QLabel
+{
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #60616f;
+  text-align: center;
+}
+QDialog QLineEdit
+{
+  background-color: #f4f5f9;
+  border: 1px solid #cbcbcb;
+  border-radius: 3px;
+}
+
+QDialog &gt; QPushButton {
+
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #60616f;
+  text-align: center;
+
+  border: none;
+  border-radius: 10px;
+  
+  background-color:   qlineargradient(spread:reflect, x1:0.471, y1:0, x2:0.465, y2:1, stop:0.465909 rgba(247, 248, 250, 255), stop:1 rgba(227, 228, 232, 255))
+}
+QDialog &gt; QPushButton:hover {
+  background-color: #c6e4f0;
+}
+QDialog &gt; QPushButton:pressed {
+  padding-top: 1px;
+  background-color: qlineargradient(spread:reflect, x1:0.482, y1:1, x2:0.505, y2:0, stop:0.465909 rgba(247, 248, 250, 255), stop:1 rgba(227, 228, 232, 255))
+}
+
+
+QComboBox {
+  border: 2px solid #e6e6e9;
+  border-radius: 5px;
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  padding-left: 10px;
+
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #878787;
+
+}
+QComboBox::down-arrow {
+  border: none;
+  border-radius: 5px;
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  image: url(:/icons/icons/downArrow.png);
+}
+QComboBox::drop-down {
+  width: 25px;
+  border: none;
+  border-radius: 0px;
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  border-left: 2px solid #d6d7da;
+  margin: 4px 0px;
+  image: url(:/icons/icons/downArrow.png);
+
+}
+QComboBox:hover {
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  border-radius: 5px;
+}
+
+QComboBox QAbstractItemView, QComboBox QAbstractItemView::item  {
+  background-color: qlineargradient(spread:pad, x1:0.511, y1:0, x2:0.510955, y2:1, stop:0   rgba(255, 255, 255, 255), stop:0.943182 rgba(245, 246, 249, 255));
+  border: 1px solid #ecedef;
+  border-radius: 5px;
+  padding-left: 10px;
+  selection-background-color: #c6e4f0;
+
+ }
+
+QComboBox QAbstractItemView::item:hover  {
+  background-color: #c6e4f0;
+  selection-background-color: #c6e4f0;
+ }</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+	<number>15</number>
+   </property>
+   <property name="topMargin">
+	<number>20</number>
+   </property>
+   <property name="rightMargin">
+	<number>15</number>
+   </property>
+   <property name="bottomMargin">
+	<number>20</number>
+   </property>
+   <item row="0" column="0" colspan="2">
+	<widget class="QLabel" name="label">
+	 <property name="sizePolicy">
+	  <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+	   <horstretch>0</horstretch>
+	   <verstretch>0</verstretch>
+	  </sizepolicy>
+	 </property>
+	 <property name="text">
+	  <string>Введите личные данные:</string>
+	 </property>
+	 <property name="alignment">
+	  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+	 </property>
+	</widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+	<widget class="QWidget" name="widget" native="true">
+	 <layout class="QVBoxLayout" name="verticalLayout">
+	  <property name="spacing">
+	   <number>15</number>
+	  </property>
+	  <property name="leftMargin">
+	   <number>40</number>
+	  </property>
+	  <property name="topMargin">
+	   <number>0</number>
+	  </property>
+	  <property name="rightMargin">
+	   <number>40</number>
+	  </property>
+	  <property name="bottomMargin">
+	   <number>0</number>
+	  </property>
+	  <item>
+	   <widget class="QLabel" name="label_2">
+		<property name="text">
+		 <string>Имя:</string>
+		</property>
+		<property name="alignment">
+		 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+		</property>
+	   </widget>
+	  </item>
+	  <item>
+	   <widget class="QLineEdit" name="nameLineEdit">
+		<property name="minimumSize">
+		 <size>
+		  <width>0</width>
+		  <height>30</height>
+		 </size>
+		</property>
+		<property name="maximumSize">
+		 <size>
+		  <width>16777215</width>
+		  <height>30</height>
+		 </size>
+		</property>
+	   </widget>
+	  </item>
+	  <item>
+	   <widget class="QLabel" name="label_3">
+		<property name="text">
+		 <string>Фамилия:</string>
+		</property>
+		<property name="alignment">
+		 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+		</property>
+	   </widget>
+	  </item>
+	  <item>
+	   <widget class="QLineEdit" name="surnameLineEdit">
+		<property name="minimumSize">
+		 <size>
+		  <width>0</width>
+		  <height>30</height>
+		 </size>
+		</property>
+		<property name="maximumSize">
+		 <size>
+		  <width>16777215</width>
+		  <height>30</height>
+		 </size>
+		</property>
+	   </widget>
+	  </item>
+	  <item>
+	   <widget class="QLabel" name="label_4">
+		<property name="text">
+		 <string>Класс или группа:</string>
+		</property>
+		<property name="alignment">
+		 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+		</property>
+	   </widget>
+	  </item>
+	  <item>
+	   <widget class="QLineEdit" name="groupLineEdit">
+		<property name="minimumSize">
+		 <size>
+		  <width>0</width>
+		  <height>30</height>
+		 </size>
+		</property>
+		<property name="maximumSize">
+		 <size>
+		  <width>16777215</width>
+		  <height>30</height>
+		 </size>
+		</property>
+	   </widget>
+	  </item>
+	 </layout>
+	</widget>
+   </item>
+   <item row="3" column="0">
+	<widget class="QPushButton" name="okPushButton">
+	 <property name="sizePolicy">
+	  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+	   <horstretch>0</horstretch>
+	   <verstretch>0</verstretch>
+	  </sizepolicy>
+	 </property>
+	 <property name="minimumSize">
+	  <size>
+	   <width>0</width>
+	   <height>35</height>
+	  </size>
+	 </property>
+	 <property name="maximumSize">
+	  <size>
+	   <width>16777215</width>
+	   <height>35</height>
+	  </size>
+	 </property>
+	 <property name="text">
+	  <string>ОК</string>
+	 </property>
+	</widget>
+   </item>
+   <item row="3" column="1">
+	<widget class="QPushButton" name="canselPushButton">
+	 <property name="sizePolicy">
+	  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+	   <horstretch>0</horstretch>
+	   <verstretch>0</verstretch>
+	  </sizepolicy>
+	 </property>
+	 <property name="minimumSize">
+	  <size>
+	   <width>0</width>
+	   <height>35</height>
+	  </size>
+	 </property>
+	 <property name="maximumSize">
+	  <size>
+	   <width>16777215</width>
+	   <height>35</height>
+	  </size>
+	 </property>
+	 <property name="text">
+	  <string>Отмена</string>
+	 </property>
+	</widget>
+   </item>
+   <item row="2" column="0">
+	<spacer name="verticalSpacer">
+	 <property name="orientation">
+	  <enum>Qt::Vertical</enum>
+	 </property>
+	 <property name="sizeHint" stdset="0">
+	  <size>
+	   <width>20</width>
+	   <height>30</height>
+	  </size>
+	 </property>
+	</spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

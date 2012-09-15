@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/downArrow.png</file>
+        <file>icons/checkedRadioButton.png</file>
+        <file>icons/hoveredRadioButton.png</file>
+        <file>icons/uncheckedRadioButton.png</file>
+        <file>icons/closedTreeIcon.png</file>
+        <file>icons/endTreeIcon.png</file>
+        <file>icons/openTreeIcon.png</file>
+    </qresource>
+</RCC>

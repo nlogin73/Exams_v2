@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/xsd">
+        <file>xsd/examstestconfig.xsd</file>
+        <file>xsd/pluginconfig.xsd</file>
+        <file>xsd/reviewedtestconfig.xsd</file>
+    </qresource>
+</RCC>
